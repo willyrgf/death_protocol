@@ -1,3 +1,5 @@
+use death_protocol::start_checkers;
+
 fn main() {
-    println!("Hello, world!");
+    start_checkers();
 }
