@@ -1,5 +1,9 @@
 use death_protocol::start_checkers;
+use log::debug;
 
-fn main() {
-    start_checkers();
+#[tokio::main]
+async fn main() {
+    debug!("start main()");
+
+    start_checkers().await;
 }

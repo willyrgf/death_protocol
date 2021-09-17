@@ -1,3 +1,15 @@
-pub fn send_health_check() {
-    println!("send the healthcheck");
+use log::debug;
+use teloxide::prelude::*;
+
+pub async fn send_health_check() {
+    teloxide::enable_logging!();
+    debug!("start bot...");
+
+    let bot = Bot::from_env().auto_send();
+
+    teloxide::repl(bot, |message| async move {
+        message.answer("hi").await?;
+        respond(())
+    })
+    .await
 }
