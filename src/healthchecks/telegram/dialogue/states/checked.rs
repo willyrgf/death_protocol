@@ -1,6 +1,7 @@
 use crate::healthchecks::telegram::dialogue::Dialogue;
 use teloxide::prelude::*;
 
+#[derive(Clone)]
 pub struct CheckedState;
 
 #[teloxide(subtransition)]

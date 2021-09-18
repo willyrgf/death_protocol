@@ -4,7 +4,7 @@ use teloxide::prelude::*;
 
 pub mod states;
 
-#[derive(Transition, From)]
+#[derive(Transition, From, Clone)]
 pub enum Dialogue {
     Start(StartState),
     Checked(CheckedState),
