@@ -28,3 +28,7 @@ async fn handle_message(
         }
     }
 }
+
+// TODO: add a thread with a loop to send the checker with a timer
+// TODO: adjust the states and messages
+// TODO: test the dialogue for handle with a non first message
